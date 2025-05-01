@@ -1,24 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Apq-IA-wRZ">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Pun-->
+        <scene sceneID="vNh-98-HfO">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController title="Pun" id="Tmb-K3-W88" customClass="PunViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1sB-It-YNX">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GS5-7x-HBx">
+                                <rect key="frame" x="48" y="104" width="294" height="525"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="294" id="LPh-Ya-W9v"/>
+                                    <constraint firstAttribute="height" constant="525" id="aT8-5g-M2S"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="LPh-Ya-W9v"/>
+                                        <exclude reference="aT8-5g-M2S"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="LPh-Ya-W9v"/>
+                                        <include reference="aT8-5g-M2S"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5p-Iw-YJw">
+                                <rect key="frame" x="165.33333333333334" y="636" width="59.666666666666657" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Next"/>
+                                <connections>
+                                    <action selector="nextTapped:" destination="Tmb-K3-W88" eventType="touchUpInside" id="qhj-LN-RxJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nYP-0z-8Pf"/>
+                        <color key="backgroundColor" red="0.81258069854421711" green="0.76928564905420904" blue="0.72858473886314434" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="U5p-Iw-YJw" firstAttribute="top" secondItem="GS5-7x-HBx" secondAttribute="bottom" constant="7" id="L26-EW-WQG"/>
+                            <constraint firstItem="GS5-7x-HBx" firstAttribute="top" secondItem="nYP-0z-8Pf" secondAttribute="top" constant="10" id="WTQ-D3-UkI"/>
+                            <constraint firstItem="GS5-7x-HBx" firstAttribute="centerX" secondItem="1sB-It-YNX" secondAttribute="centerX" id="YrM-dr-Grr"/>
+                            <constraint firstItem="U5p-Iw-YJw" firstAttribute="centerX" secondItem="nYP-0z-8Pf" secondAttribute="centerX" id="vQY-Rr-lhd"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Pun" image="quote.bubble.fill" catalog="system" id="hM2-vf-fi2"/>
+                    <connections>
+                        <outlet property="jokeImageView" destination="GS5-7x-HBx" id="Wyc-4l-fzW"/>
+                        <outlet property="nextButton" destination="U5p-Iw-YJw" id="q25-hN-Z66"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nMo-DL-gwI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="90.769230769230759" y="416.58767772511845"/>
+        </scene>
+        <!--Dad-->
+        <scene sceneID="img-dK-pXv">
+            <objects>
+                <viewController title="Dad" id="0e7-TM-BgF" customClass="DadViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vKS-Vx-oU3">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mpe-eX-Vbg">
+                                <rect key="frame" x="48" y="104" width="294" height="525"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="525" id="5hv-Iv-Khy"/>
+                                    <constraint firstAttribute="width" constant="294" id="joI-KB-inz"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="joI-KB-inz"/>
+                                        <exclude reference="5hv-Iv-Khy"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="joI-KB-inz"/>
+                                        <include reference="5hv-Iv-Khy"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnk-ZC-Xnv">
+                                <rect key="frame" x="165.33333333333334" y="636" width="59.666666666666657" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Next"/>
+                                <connections>
+                                    <action selector="nextTapped:" destination="0e7-TM-BgF" eventType="touchUpInside" id="G9N-AL-4Dk"/>
+                                    <action selector="nextTapped:" destination="Tmb-K3-W88" eventType="touchUpInside" id="pWv-EZ-b1N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pdc-Bf-G7O"/>
+                        <color key="backgroundColor" red="0.92668733891752575" green="0.88488077073514848" blue="0.88061968181032446" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="qnk-ZC-Xnv" firstAttribute="top" secondItem="mpe-eX-Vbg" secondAttribute="bottom" constant="7" id="2qa-f9-e3k"/>
+                            <constraint firstItem="qnk-ZC-Xnv" firstAttribute="centerX" secondItem="Pdc-Bf-G7O" secondAttribute="centerX" id="DFv-ma-eEr"/>
+                            <constraint firstItem="mpe-eX-Vbg" firstAttribute="centerX" secondItem="Pdc-Bf-G7O" secondAttribute="centerX" id="k1I-EA-2Sl"/>
+                            <constraint firstItem="mpe-eX-Vbg" firstAttribute="top" secondItem="Pdc-Bf-G7O" secondAttribute="top" constant="10" id="tPV-h2-nZZ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dad" image="person.fill" catalog="system" id="aDQ-FL-O2W"/>
+                    <connections>
+                        <outlet property="jokeImageView" destination="mpe-eX-Vbg" id="BvG-JA-0Xs"/>
+                        <outlet property="nextButton" destination="qnk-ZC-Xnv" id="gHb-wv-g8h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7dr-pu-qIQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="11"/>
+        </scene>
+        <!--Good-->
+        <scene sceneID="z4L-cY-nmy">
+            <objects>
+                <viewController title="Good" id="yjv-Pg-10S" customClass="GoodViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ygs-ep-el8">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JR9-3f-y5e">
+                                <rect key="frame" x="48" y="104" width="294" height="525"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="525" id="2SQ-N3-A0l"/>
+                                    <constraint firstAttribute="width" constant="294" id="EMf-s0-IVV"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="EMf-s0-IVV"/>
+                                        <exclude reference="2SQ-N3-A0l"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="EMf-s0-IVV"/>
+                                        <include reference="2SQ-N3-A0l"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ii-0W-t3e">
+                                <rect key="frame" x="165.33333333333334" y="636" width="59.666666666666657" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="jLm-iW-GCf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Next"/>
+                                <connections>
+                                    <action selector="nextTapped:" destination="yjv-Pg-10S" eventType="touchUpInside" id="QQK-TN-LC5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EYd-7o-kAr"/>
+                        <color key="backgroundColor" red="0.75940108299255371" green="0.89218264818191528" blue="0.9369778037071228" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EYd-7o-kAr" firstAttribute="bottom" secondItem="8Ii-0W-t3e" secondAttribute="bottom" constant="56" id="5Yl-Js-WCY"/>
+                            <constraint firstItem="8Ii-0W-t3e" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EYd-7o-kAr" secondAttribute="leading" id="V2h-XF-gvL"/>
+                            <constraint firstItem="8Ii-0W-t3e" firstAttribute="centerX" secondItem="EYd-7o-kAr" secondAttribute="centerX" id="jxN-7S-Cqd"/>
+                            <constraint firstItem="8Ii-0W-t3e" firstAttribute="top" secondItem="JR9-3f-y5e" secondAttribute="bottom" constant="7" id="nSn-4u-wHF"/>
+                            <constraint firstItem="JR9-3f-y5e" firstAttribute="centerX" secondItem="EYd-7o-kAr" secondAttribute="centerX" id="xlT-AZ-6w5"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Good" image="face.smiling.inverse" catalog="system" id="ubL-hh-uCh"/>
+                    <connections>
+                        <outlet property="jokeImageView" destination="JR9-3f-y5e" id="Yw4-eL-pP4"/>
+                        <outlet property="nextButton" destination="8Ii-0W-t3e" id="fCL-DB-hdN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="elQ-a0-fg2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.538461538461533" y="-448.57819905213267"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Wer-Jy-fco">
+            <objects>
+                <tabBarController id="Apq-IA-wRZ" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LUm-dH-jKp">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="yjv-Pg-10S" kind="relationship" relationship="viewControllers" id="Z4n-9T-Xol"/>
+                        <segue destination="Tmb-K3-W88" kind="relationship" relationship="viewControllers" id="4hc-n3-bGc"/>
+                        <segue destination="0e7-TM-BgF" kind="relationship" relationship="viewControllers" id="cKC-7Z-zU1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3t6-Xh-sfl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-844" y="-145"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="face.smiling.inverse" catalog="system" width="128" height="123"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="quote.bubble.fill" catalog="system" width="128" height="110"/>
+    </resources>
 </document>
